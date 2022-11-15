@@ -10,7 +10,7 @@ const { PORT, SECRET_KEY } = process.env;
 app.use(express.static(relativePath("public")));
 
 app.get("/env", (req, res) => {
-  res.send({ SECRET_KEY });
+  res.send({ SECRET_KEY, PORT });
 });
 
 app.listen(PORT, () => console.log("Server is listening on port: " + PORT));
